@@ -50,7 +50,7 @@ const Hero = () => {
 
                         <div className="hero-image-container">
                             <motion.img
-                                src="hemanth-hero.png"
+                                src={`${import.meta.env.BASE_URL}hemanth-hero.png`}
                                 alt="Hemanth G"
                                 className="hero-image"
                                 animate={{ y: [0, -10, 0] }}
