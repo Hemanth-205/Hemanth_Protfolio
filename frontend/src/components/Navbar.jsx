@@ -71,7 +71,7 @@ const Navbar = () => {
                         ))}
                     </ul>
 
-                    <a href="/HEMANTH_G_IT_A.pdf" download className="btn-primary nav-btn">
+                    <a href="HEMANTH_G_IT_A.pdf" download className="btn-primary nav-btn">
                         Download CV
                     </a>
 
