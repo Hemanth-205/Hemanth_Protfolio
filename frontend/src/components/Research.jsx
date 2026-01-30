@@ -17,7 +17,7 @@ const Research = () => {
             journal: 'International Conference on Computational Intelligence (ICCI-2025)',
             details: 'Submitted Research Paper',
             description: 'Submitted a research paper exploring the integration of multimedia and IoT for real-time surveillance and digital signage in urban environments. Focused on enhancing urban safety, communication, and data-driven efficiency.',
-            image: '/smart-city.png',
+            image: `${import.meta.env.BASE_URL}smart-city.png`,
             year: '2025'
         }
     ];
