@@ -5,6 +5,14 @@ import './Certifications.css';
 const Certifications = () => {
     const certifications = [
         {
+            title: '1st Prize - National Technology Week Project Exhibition',
+            provider: 'IQAC & R&D Cell, MVIT, Puducherry (2026)'
+        },
+        {
+            title: 'CCNA: Switching, Routing & Wireless Essentials',
+            provider: 'Cisco Networking Academy'
+        },
+        {
             title: 'Honors Diploma in Computer Programming',
             provider: 'SARVA I.T & Educational Development'
         },
@@ -43,9 +51,9 @@ const Certifications = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="section-title">My <span className="highlight">Certifications</span></h2>
+                    <h2 className="section-title">My <span className="highlight">Certifications & Achievements</span></h2>
                     <p className="section-subtitle">
-                        Professional certifications and technical training
+                        Professional certifications, achievements, and technical training
                     </p>
                 </motion.div>
 

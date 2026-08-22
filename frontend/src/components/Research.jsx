@@ -19,6 +19,14 @@ const Research = () => {
             description: 'Submitted a research paper exploring the integration of multimedia and IoT for real-time surveillance and digital signage in urban environments. Focused on enhancing urban safety, communication, and data-driven efficiency.',
             image: `${import.meta.env.BASE_URL}smart-city.png`,
             year: '2025'
+        },
+        {
+            title: 'Federated Trust-Aware Autonomous Self-Healing Framework for Multi-Controller Software Defined Networks',
+            journal: '7th IEEE International Conference on Systems, Computation, Automation and Networking (ICSCAN 2026)',
+            details: 'Published in IEEE Xplore Digital Library (DOI: 10.1109/ICSCAN66520.2026.11588469)',
+            description: 'Proposed a novel framework combining Federated Learning, Bi-LSTM Intrusion Detection, PBFT Consensus, Trust-Aware Validation, and Autonomous Self-Healing to improve security in multi-controller SDN.',
+            image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800',
+            year: '2026'
         }
     ];
 

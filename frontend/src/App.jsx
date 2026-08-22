@@ -7,13 +7,11 @@ import Portfolio from './components/Portfolio';
 import Research from './components/Research';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
-import ParticleBackground from './components/ParticleBackground';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <ParticleBackground />
       <Navbar />
       <Hero />
       <Education />

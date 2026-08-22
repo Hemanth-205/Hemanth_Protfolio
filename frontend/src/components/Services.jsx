@@ -30,7 +30,7 @@ const Services = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="section-title">My <span className="highlight">Skills & Services</span></h2>
+                    <h2 className="section-title">My <span className="highlight">Skills</span></h2>
                     <p className="section-subtitle">
                         Passionate about translating ideas into visually appealing and functional digital experiences.
                     </p>

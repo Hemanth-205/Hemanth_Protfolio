@@ -32,9 +32,9 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Home', href: '#home' },
         { name: 'Education', href: '#education' },
-        { name: 'Services', href: '#service' },
+        { name: 'Skills', href: '#service' },
         { name: 'Internship', href: '#internship' },
-        { name: 'Portfolio', href: '#portfolio' },
+        { name: 'Projects', href: '#portfolio' },
         { name: 'Research', href: '#research' },
         { name: 'Certifications', href: '#certifications' },
         { name: 'Contact', href: '#contact' }
@@ -71,7 +71,7 @@ const Navbar = () => {
                         ))}
                     </ul>
 
-                    <a href={`${import.meta.env.BASE_URL}HEMANTH_G_IT_A.pdf`} download className="btn-primary nav-btn">
+                    <a href={`${import.meta.env.BASE_URL}Hemanth_Resume.pdf`} download className="btn-primary nav-btn">
                         Download CV
                     </a>
 

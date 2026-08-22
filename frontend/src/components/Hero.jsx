@@ -25,7 +25,7 @@ const Hero = () => {
                             <p className="hero-subtitle">Frontend Developer & <span className="highlight">IT Student</span></p>
                             <p className="hero-description">
                                 Passionate Information Technology student with a keen interest in frontend development and creating
-                                user-focused digital experiences. Proficient in Java, C, HTML, CSS, and JavaScript, with hands-on
+                                user-focused digital experiences. Proficient in Java, JavaScript, SQL, MongoDB, HTML, CSS, and React.js, with hands-on
                                 experience in building responsive and interactive web applications.
                             </p>
 

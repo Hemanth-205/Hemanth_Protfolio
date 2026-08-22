@@ -10,15 +10,15 @@ const Education = () => {
             institution: 'Manakula Vinayagar Institute of Technology',
             location: 'Puducherry',
             grade: 'CGPA: 8.5',
-            year: '2022 - 2026'
+            year: '2023 - 2027'
         },
         {
             icon: <Award size={32} />,
             degree: 'HSC',
             institution: 'Seventh Day Adventist Hr Sec School',
             location: 'Puducherry',
-            grade: '73%',
-            year: '2022'
+            grade: '73.33%',
+            year: '2023'
         }
     ];
 

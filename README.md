@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # GraphixPro Portfolio
 
 A premium, modern personal portfolio website built with React and Express.js, featuring smooth animations and a clean design.
@@ -99,7 +100,11 @@ d:\Hemanth\
 
 ## 📄 License
 
-Feel free to use this project for your own portfolio!
+MIT License - feel free to use this project for your own portfolio!
 
 ---
 
+Built with ❤️ using React and Express
+=======
+# Hemanth_Protfolio
+>>>>>>> 819f2e83734bdf930fd4fbd5ef209061af993782
