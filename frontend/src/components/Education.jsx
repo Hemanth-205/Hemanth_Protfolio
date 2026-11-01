@@ -1,24 +1,35 @@
 import { motion } from 'framer-motion';
-import { GraduationCap, Award } from 'lucide-react';
+import { GraduationCap, Award, Calendar, MapPin, Sparkles } from 'lucide-react';
 import './Education.css';
 
 const Education = () => {
     const education = [
         {
-            icon: <GraduationCap size={32} />,
-            degree: 'B.Tech - Information Technology',
+            icon: <GraduationCap size={28} />,
+            degree: 'Bachelor of Technology – Information Technology',
             institution: 'Manakula Vinayagar Institute of Technology',
-            location: 'Puducherry',
-            grade: 'CGPA: 8.5',
-            year: '2023 - 2027'
+            location: 'Puducherry, India',
+            grade: 'CGPA 8.5',
+            year: '2023 - 2027',
+            featured: true
         },
         {
-            icon: <Award size={32} />,
-            degree: 'HSC',
-            institution: 'Seventh Day Adventist Hr Sec School',
-            location: 'Puducherry',
-            grade: '73.33%',
-            year: '2023'
+            icon: <Award size={28} />,
+            degree: 'Higher Secondary Certificate (HSC)',
+            institution: 'Seventh Day Adventist Higher Secondary School',
+            location: 'Puducherry, India',
+            grade: 'Score: 73.33%',
+            year: '2023',
+            featured: false
+        },
+        {
+            icon: <Award size={28} />,
+            degree: 'Secondary School Leaving Certificate (SSLC)',
+            institution: 'Seventh Day Adventist Higher Secondary School',
+            location: 'Puducherry, India',
+            grade: 'Grade: Pass',
+            year: '2021',
+            featured: false
         }
     ];
 
@@ -31,9 +42,10 @@ const Education = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="section-title">My <span className="highlight">Education</span></h2>
+                    <span className="section-badge">Academic Background</span>
+                    <h2 className="section-title">Education & <span className="highlight">Qualifications</span></h2>
                     <p className="section-subtitle">
-                        Academic background and qualifications
+                        Academic journey and technical foundations from higher secondary to university
                     </p>
                 </motion.div>
 
@@ -41,20 +53,35 @@ const Education = () => {
                     {education.map((edu, index) => (
                         <motion.div
                             key={index}
-                            className="education-card"
+                            className={`education-card ${edu.featured ? 'featured-card' : ''}`}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            whileHover={{ y: -10 }}
+                            whileHover={{ y: -6 }}
                         >
-                            <div className="education-icon">{edu.icon}</div>
-                            <h3>{edu.degree}</h3>
-                            <p className="institution">{edu.institution}</p>
-                            <p className="location">{edu.location}</p>
-                            <div className="education-details">
-                                <span className="grade">{edu.grade}</span>
-                                <span className="year">{edu.year}</span>
+                            {edu.featured && (
+                                <div className="card-top-tag">
+                                    <Sparkles size={13} /> Current Degree
+                                </div>
+                            )}
+                            <div className="edu-card-header">
+                                <div className="education-icon-box">{edu.icon}</div>
+                                <span className="grade-badge">{edu.grade}</span>
+                            </div>
+
+                            <div className="edu-card-body">
+                                <h3>{edu.degree}</h3>
+                                <p className="institution">{edu.institution}</p>
+                                
+                                <div className="edu-card-meta">
+                                    <span className="edu-meta-item">
+                                        <MapPin size={15} /> {edu.location}
+                                    </span>
+                                    <span className="edu-meta-item">
+                                        <Calendar size={15} /> {edu.year}
+                                    </span>
+                                </div>
                             </div>
                         </motion.div>
                     ))}

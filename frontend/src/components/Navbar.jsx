@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, FileDown } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
 
     useEffect(() => {
         const handleScroll = () => {
+            setScrolled(window.scrollY > 20);
+
             const sections = ['home', 'education', 'service', 'internship', 'portfolio', 'research', 'certifications', 'contact'];
-            const scrollPosition = window.scrollY + 100;
+            const scrollPosition = window.scrollY + 120;
 
             for (const section of sections) {
                 const element = document.getElementById(section);
@@ -36,7 +39,7 @@ const Navbar = () => {
         { name: 'Internship', href: '#internship' },
         { name: 'Projects', href: '#portfolio' },
         { name: 'Research', href: '#research' },
-        { name: 'Certifications', href: '#certifications' },
+        { name: 'Credentials', href: '#certifications' },
         { name: 'Contact', href: '#contact' }
     ];
 
@@ -50,12 +53,16 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="navbar">
+        <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container">
                 <div className="nav-content">
-                    <div className="logo">
+                    <a href="#home" className="logo" onClick={(e) => scrollToSection(e, '#home')}>
                         <div className="logo-circle">HG</div>
-                    </div>
+                        <div className="logo-text">
+                            <span className="logo-name">Hemanth G</span>
+                            <span className="logo-role">B.Tech IT</span>
+                        </div>
+                    </a>
 
                     <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
                         {navLinks.map((link) => (
@@ -71,13 +78,20 @@ const Navbar = () => {
                         ))}
                     </ul>
 
-                    <a href={`${import.meta.env.BASE_URL}Hemanth_Resume.pdf`} download className="btn-primary nav-btn">
-                        Download CV
-                    </a>
+                    <div className="nav-actions">
+                        <a href={`${import.meta.env.BASE_URL}HEMANTH_G.pdf`} download="HEMANTH_G.pdf" className="btn-primary nav-btn">
+                            <FileDown size={15} />
+                            <span>Resume</span>
+                        </a>
 
-                    <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
-                        {isOpen ? <X size={24} /> : <Menu size={24} />}
-                    </button>
+                        <button 
+                            className="mobile-toggle" 
+                            onClick={() => setIsOpen(!isOpen)}
+                            aria-label="Toggle navigation"
+                        >
+                            {isOpen ? <X size={22} /> : <Menu size={22} />}
+                        </button>
+                    </div>
                 </div>
             </div>
         </nav>

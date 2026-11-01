@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FileText } from 'lucide-react';
+import { FileText, ExternalLink } from 'lucide-react';
 import './Research.css';
 
 const Research = () => {
@@ -10,7 +10,8 @@ const Research = () => {
             details: 'Vol. 07, Issue 02, 2025 (DOI: 10.47392/IRJASH.2025.011)',
             description: 'Published a research paper focusing on Big Data privacy and security challenges. Reviewed solutions like K-anonymity, L-diversity, and T-closeness, and assessed security practices by IBM, Microsoft, and Infosys.',
             image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
-            year: '2025'
+            year: '2025',
+            link: 'https://doi.org/10.47392/IRJASH.2025.011'
         },
         {
             title: 'Integrating Multimedia Technologies in Smart Cities: Advancing Surveillance and Interactive Digital Signage for Urban Efficiency',
@@ -26,7 +27,8 @@ const Research = () => {
             details: 'Published in IEEE Xplore Digital Library (DOI: 10.1109/ICSCAN66520.2026.11588469)',
             description: 'Proposed a novel framework combining Federated Learning, Bi-LSTM Intrusion Detection, PBFT Consensus, Trust-Aware Validation, and Autonomous Self-Healing to improve security in multi-controller SDN.',
             image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800',
-            year: '2026'
+            year: '2026',
+            link: 'https://doi.org/10.1109/ICSCAN66520.2026.11588469'
         }
     ];
 
@@ -39,9 +41,10 @@ const Research = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
+                    <span className="section-badge">Academic Research</span>
                     <h2 className="section-title">Research & <span className="highlight">Publications</span></h2>
                     <p className="section-subtitle">
-                        Academic contributions and research work
+                        Peer-reviewed publications, IEEE conference papers, and computational research contributions
                     </p>
                 </motion.div>
 
@@ -70,6 +73,11 @@ const Research = () => {
                                 <p className="journal">{pub.journal}</p>
                                 <p className="details">{pub.details}</p>
                                 <p className="description">{pub.description}</p>
+                                {pub.link && (
+                                    <a href={pub.link} target="_blank" rel="noopener noreferrer" className="read-more">
+                                        View DOI / Publication <ExternalLink size={16} />
+                                    </a>
+                                )}
                             </div>
                         </motion.div>
                     ))}

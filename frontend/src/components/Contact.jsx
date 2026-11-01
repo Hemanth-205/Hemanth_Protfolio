@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Linkedin, Github } from 'lucide-react';
 import './Contact.css';
 
 const Contact = () => {
@@ -53,9 +53,10 @@ const Contact = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="section-title">Get In <span className="highlight">Touch</span></h2>
+                    <span className="section-badge">Get In Touch</span>
+                    <h2 className="section-title">Let's <span className="highlight">Connect</span></h2>
                     <p className="section-subtitle">
-                        Have a project in mind? Let's work together!
+                        Interested in collaboration, engineering opportunities, or technical inquiries? Reach out anytime!
                     </p>
                 </motion.div>
 
@@ -71,14 +72,18 @@ const Contact = () => {
                             <Mail className="info-icon" />
                             <div>
                                 <h4>Email</h4>
-                                <p>grhemanth26@gmail.com</p>
+                                <a href="mailto:grhemanth26@gmail.com" className="contact-link">
+                                    <p>grhemanth26@gmail.com</p>
+                                </a>
                             </div>
                         </div>
                         <div className="info-item">
                             <Phone className="info-icon" />
                             <div>
                                 <h4>Phone</h4>
-                                <p>+91 9342545024</p>
+                                <a href="tel:+919342545024" className="contact-link">
+                                    <p>+91 9342545024</p>
+                                </a>
                             </div>
                         </div>
                         <div className="info-item">
@@ -86,6 +91,24 @@ const Contact = () => {
                             <div>
                                 <h4>Location</h4>
                                 <p>Puducherry, India</p>
+                            </div>
+                        </div>
+                        <div className="info-item">
+                            <Linkedin className="info-icon" />
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/hemanth-g25" target="_blank" rel="noopener noreferrer" className="contact-link">
+                                    <p>linkedin.com/in/hemanth-g25</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="info-item">
+                            <Github className="info-icon" />
+                            <div>
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/Hemanth-205" target="_blank" rel="noopener noreferrer" className="contact-link">
+                                    <p>github.com/Hemanth-205</p>
+                                </a>
                             </div>
                         </div>
                     </motion.div>

@@ -5,19 +5,25 @@ import './Internship.css';
 const Internship = () => {
     const internships = [
         {
-            company: 'MOTION CUT',
-            role: 'Frontend Developer',
-            duration: 'February 2025 - March 2025',
-            location: 'Remote',
-            description: 'Worked on frontend development projects, building responsive and interactive web applications using modern web technologies.',
-            icon: <Briefcase size={24} />
-        },
-        {
             company: 'NEXTGEN SOLUTION',
             role: 'Data Analyst',
             duration: 'June 2025 - July 2025',
             location: 'Remote',
-            description: 'Analyzed data sets and created insights using Power BI and other data analytics tools to support business decisions.',
+            points: [
+                'Analyzed and troubleshot data-driven workflows, identifying issues and applying structured problem-solving to resolve data quality and reporting gaps.',
+                'Built dashboards and reports using Power BI to communicate findings clearly to stakeholders.'
+            ],
+            icon: <Briefcase size={24} />
+        },
+        {
+            company: 'MOTION CUT',
+            role: 'Frontend Developer',
+            duration: 'February 2025 - March 2025',
+            location: 'Remote',
+            points: [
+                'Developed and debugged responsive, user-facing web components, collaborating with the team to resolve issues and meet functional requirements.',
+                'Gained practical experience with HTML, CSS, and JavaScript in a fast-paced, deadline-driven environment.'
+            ],
             icon: <Briefcase size={24} />
         }
     ];
@@ -31,9 +37,10 @@ const Internship = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="section-title">My <span className="highlight">Internships</span></h2>
+                    <span className="section-badge">Industry Experience</span>
+                    <h2 className="section-title">Professional <span className="highlight">Internships</span></h2>
                     <p className="section-subtitle">
-                        Professional experience and hands-on learning
+                        Practical industry experience, real-world development, and data-driven problem solving
                     </p>
                 </motion.div>
 
@@ -67,7 +74,11 @@ const Internship = () => {
                                 </span>
                             </div>
 
-                            <p className="internship-description">{internship.description}</p>
+                            <ul className="internship-bullets">
+                                {internship.points.map((pt, pIdx) => (
+                                    <li key={pIdx}>{pt}</li>
+                                ))}
+                            </ul>
                         </motion.div>
                     ))}
                 </div>
